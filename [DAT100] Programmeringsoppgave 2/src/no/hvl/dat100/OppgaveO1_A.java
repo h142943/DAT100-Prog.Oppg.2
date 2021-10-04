@@ -26,7 +26,7 @@ public class OppgaveO1_A {
 
 		
 //c1) Summer tall i tabell med vanlig for-løkke 
-	public static int summer1(int[] tabell) {
+	public static int summer(int[] tabell) {
 		int sum = 0;
 		for (int i=0; i<tabell.length; i++) {
 			sum += tabell[i];
