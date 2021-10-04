@@ -1,6 +1,14 @@
 package no.hvl.dat100;
 
 public class OppgaveO1_B {
+	
+	public static void main(String[] args) {
+		int[][] a = { {1,2,3}, {4,5,6} };
+		int[][] b = { {7,8}, {9,10}, {11,12} };
+		//skal gi: { {58,64}, {139,154} }
+		
+		skrivUt(multipliser(a,b));
+	}
 
 // a) Skriv ut en matrise (bruk nøstede for-løkker)
 	public static void skrivUt(int[][] matrise) {
@@ -67,14 +75,14 @@ public class OppgaveO1_B {
 //f) Multipliser to matriser 
 	public static int[][] multipliser(int[][] a, int[][] b) {
 		int[][] nymatrise = new int[a.length][b[0].length];
-		int produkt = 0;
+		int sum = 0;
 		for (int i=0; i<nymatrise.length; i++) {
 			for (int j=0; j<nymatrise[i].length; j++) {
-				for (int k=0; k<a.length; k++) {
-					produkt += a[i][k]*b[k][j];
+				for (int k=0; k<b.length; k++) {
+					sum += a[i][k]*b[k][j];
 				}
-				nymatrise[i][j] = produkt;
-				produkt = 0;
+				nymatrise[i][j] = sum;
+				sum = 0;
 			}
 		}
 		return nymatrise;
