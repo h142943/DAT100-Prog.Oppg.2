@@ -2,15 +2,8 @@ package no.hvl.dat100;
 
 public class OppgaveO1_B {
 	
-	public static void main(String[] args) {
-		int[][] a = { {1,2,3}, {4,5,6} };
-		int[][] b = { {7,8}, {9,10}, {11,12} };
-		//skal gi: { {58,64}, {139,154} }
-		
-		skrivUt(multipliser(a,b));
-	}
 
-// a) Skriv ut en matrise (bruk nøstede for-løkker)
+		// a) Skriv ut en matrise (bruk nøstede for-løkker)
 	public static void skrivUt(int[][] matrise) {
 		for (int[] i: matrise) {
 			for (int j: i) {
